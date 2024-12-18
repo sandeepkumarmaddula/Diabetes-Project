@@ -1,0 +1,94 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2f2d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Main form container styling */
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    background-color: #e8f0f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.form-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Flexbox layout for input rows */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+/* Styling for input labels */
+.form-row label {
+    font-size: 16px;
+    color: #444;
+    flex: 1;
+}
+
+/* Styling for input fields */
+.form-row input[type="text"] {
+    flex: 2;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.form-row button {
+    flex: 1;
+    padding: 12px;
+    background-color: #5b9bd5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-row button:hover {
+    background-color: #4178a3;
+}
+
+/* Ensure the layout fits within the screen without scrolling */
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-row label {
+        margin-bottom: 5px;
+    }
+
+    .form-row input[type="text"],
+    .form-row button {
+        width: 100%;
+    }
+}
